@@ -1,4 +1,14 @@
-const Product = require("../models/Product");
+const Product = require("../../Module/Product");
+
+//Get all products
+exports.GetAllProducts = async (req, res) => {
+  try {
+    const product = await Product.find();
+    res.status(200).json(product);
+  } catch (error) {
+    res.status(500).json({ message: "Error getting product", error });
+  }
+};
 
 // Create a new product
 exports.createProduct = async (req, res) => {
@@ -8,8 +18,7 @@ exports.createProduct = async (req, res) => {
       image,
       KeyInsights,
       AdvertisingCost,
-      AboutTitle,
-      AboutSummary,
+      About,
       userCount,
       infoCount,
       summary,
@@ -21,8 +30,7 @@ exports.createProduct = async (req, res) => {
       image,
       KeyInsights,
       AdvertisingCost,
-      AboutTitle,
-      AboutSummary,
+      About,
       userCount,
       infoCount,
       summary,

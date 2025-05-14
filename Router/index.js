@@ -10,6 +10,14 @@ const {
 } = require("../Controller/Category");
 
 const {
+  GetAllProducts,
+  createProduct,
+  getProductById,
+  updateProduct,
+  deleteProduct,
+} = require("../Controller/Product");
+
+const {
   createBlog,
   getAllBlogs,
   updateBlogs,
@@ -25,6 +33,13 @@ router.post("/category/create", createCategory);
 router.get("/category/:id", getCategoryById);
 router.post("/category/update/:id", updateCategory);
 router.post("/category/delete/:id", deleteCategory);
+
+//Product
+router.get("/products", GetAllProducts);
+router.post("/product/create", createProduct);
+router.get("/product/:id", getProductById);
+router.post("/product/update/:id", updateProduct);
+router.post("/product/delete/:id", deleteProduct);
 
 //Blogs
 router.post("/blog/create", createBlog);

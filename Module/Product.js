@@ -9,15 +9,21 @@ const ProductSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  KeyInsights: [],
-  AdvertisingCost: [],
-  AboutTitle: {
-    type: String,
-    required: true,
-  },
-  AboutSummary: {
-    type: String,
-    required: true,
+  KeyInsights: [
+    {
+      title: String,
+      value: String,
+    },
+  ],
+  AdvertisingCost: [
+    {
+      title: String,
+      value: String,
+    },
+  ],
+  About: {
+    title: String,
+    summary: String,
   },
   userCount: {
     title: String,
@@ -39,7 +45,7 @@ const ProductSchema = new mongoose.Schema({
   ],
   bannerData: {
     title: String,
-    summary: String, 
+    summary: String,
     img: String,
   },
 });
