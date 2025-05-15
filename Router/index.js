@@ -28,7 +28,7 @@ const {
 const { createUser, getAllUsers } = require("../Controller/Users");
 
 //Category
-router.get("/categorys", getAllCategory);
+router.get("/categories", getAllCategory);
 router.post("/category/create", createCategory);
 router.get("/category/:id", getCategoryById);
 router.post("/category/update/:id", updateCategory);
