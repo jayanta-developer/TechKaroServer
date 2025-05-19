@@ -38,7 +38,7 @@ router.post("/category/delete/:id", deleteCategory);
 router.get("/products", GetAllProducts);
 router.post("/product/create", createProduct);
 router.get("/product/:id", getProductById);
-router.post("/product/update/:id", updateProduct);
+router.post("/product/update/:id", updateProduct); 
 router.post("/product/delete/:id", deleteProduct);
 
 //Blogs
