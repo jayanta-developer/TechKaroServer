@@ -36,7 +36,7 @@ const ProductSchema = new mongoose.Schema({
   summary: [
     {
       title: String,
-      summary: [
+      summarys: [
         {
           summary: String,
         },
@@ -47,6 +47,10 @@ const ProductSchema = new mongoose.Schema({
     title: String,
     summary: String,
     img: String,
+  },
+  category: {
+    type: String,
+    required: true,
   },
 });
 
