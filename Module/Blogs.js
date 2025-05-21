@@ -13,17 +13,20 @@ const BlogSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  images: [],
+  metaTitle: {
+    type: String,
+    required: true,
+  },
+  metaDescription: {
+    type: String,
+    required: true,
+  },
+  image: {
+    type: String,
+    required: true,
+  },
   date: String,
   blogText: [SummeryItem],
-  meta_title: {
-    type: String,
-    required: true,
-  },
-  meta_description: {
-    type: String,
-    required: true,
-  },
 });
 
 module.exports = mongoose.model("Blog", BlogSchema);
