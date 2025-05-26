@@ -6,6 +6,7 @@ const SummeryItem = new mongoose.Schema({
     required: true,
   },
   summarys: [{ summary: String }],
+  image: String,
 });
 
 const BlogSchema = new mongoose.Schema({
