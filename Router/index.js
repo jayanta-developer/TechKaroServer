@@ -25,7 +25,7 @@ const {
   getBlogById,
 } = require("../Controller/Blogs");
 
-const { createUser, getAllUsers } = require("../Controller/Users");
+const { createUser, getAllUsers, getUserById } = require("../Controller/Users");
 
 //Category
 router.get("/categories", getAllCategory);
@@ -38,7 +38,7 @@ router.post("/category/delete/:id", deleteCategory);
 router.get("/products", GetAllProducts);
 router.post("/product/create", createProduct);
 router.get("/product/:id", getProductById);
-router.post("/product/update/:id", updateProduct); 
+router.post("/product/update/:id", updateProduct);
 router.post("/product/delete/:id", deleteProduct);
 
 //Blogs
@@ -51,5 +51,6 @@ router.post("/blog/delete/:id", deleteBlos);
 //User
 router.post("/user/create", createUser);
 router.get("/users", getAllUsers);
+router.get("/user/:id", getUserById);
 
 module.exports = router;

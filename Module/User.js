@@ -7,13 +7,19 @@ const UserSchema = new mongoose.Schema({
   },
   email: {
     type: String,
+    required: true,
   },
-  image: String,
-  number: String,
-  role: {
+  number: {
     type: String,
     required: true,
-    enum: ["Client", "Agent"],
+  },
+  message: {
+    type: String,
+    required: true,
+  },
+  subject: {
+    type: String,
+    required: true,
   },
 });
 
