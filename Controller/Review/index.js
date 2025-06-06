@@ -3,7 +3,6 @@ const Review = require("../../Module/Review");
 exports.createReview = async (req, res) => {
   try {
     const newReview = new Review(req.body);
-    console.log(newReview);
     const savedReview = await newReview.save();
     res.status(201).json(savedReview);
   } catch (err) {
