@@ -27,6 +27,21 @@ const {
 
 const { createUser, getAllUsers, getUserById } = require("../Controller/Users");
 
+const {
+  createReview,
+  getAllReviews,
+  getReviewById,
+  updateReview,
+  deleteReview,
+} = require("../Controller/Review");
+
+//review
+router.post("/review/create", createReview);
+router.get("/review", getAllReviews);
+router.get("/review/:id", getReviewById);
+router.post("/review/update/:id", updateReview);
+router.post("/review/delete/:id", deleteReview);
+
 //Category
 router.get("/categories", getAllCategory);
 router.post("/category/create", createCategory);
