@@ -18,6 +18,8 @@ const ReviewSchema = new mongoose.Schema({
   },
   status: {
     type: String,
+    enum: ["Panding", "Approve"],
+    default: "Panding",
   },
 });
 
