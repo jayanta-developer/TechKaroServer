@@ -2,23 +2,32 @@ const User = require("../../Module/User");
 
 exports.createUser = async (req, res) => {
   try {
-    const { name, email, number, message, subject } = req.body;
+    const { name, email, number, message, subject, leads, date } = req.body;
 
     // Check if user with the given email exists
     let existingUser = await User.findOne({ email });
 
     if (existingUser) {
       // Update existing user
-      existingUser.name = name;
-      existingUser.number = number;
-      existingUser.message = message;
-      existingUser.subject = subject;
+      name ? (existingUser.name = name) : null;
+      number ? (existingUser.number = number) : null;
+      message ? (existingUser.message = message) : null;
+      subject ? (existingUser.subject = subject) : null;
+      date ? (existingUser.date = date) : null;
 
       const updatedUser = await existingUser.save();
       res.status(200).json(updatedUser);
     } else {
       // Create new user
-      const newUser = new User({ name, email, number, message, subject });
+      const newUser = new User({
+        name,
+        email,
+        number,
+        message,
+        subject,
+        leads,
+        date,
+      });
       const savedUser = await newUser.save();
       res.status(201).json(savedUser);
     }

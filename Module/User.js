@@ -13,13 +13,16 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  message: {
+  leads: {
     type: String,
     required: true,
   },
+  date: String,
+  message: {
+    type: String,
+  },
   subject: {
     type: String,
-    required: true,
   },
 });
 

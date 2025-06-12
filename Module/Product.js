@@ -5,6 +5,18 @@ const ProductSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  metaTitle: {
+    type: String,
+    required: true,
+  },
+  metaDescription: {
+    type: String,
+    required: true,
+  },
+  metaKeyword: {
+    type: String,
+    required: true,
+  },
   image: {
     type: String,
     required: true,

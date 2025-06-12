@@ -15,6 +15,9 @@ exports.createProduct = async (req, res) => {
   try {
     const {
       title,
+      metaTitle,
+      metaDescription,
+      metaKeyword,
       image,
       KeyInsights,
       AdvertisingCost,
@@ -27,6 +30,9 @@ exports.createProduct = async (req, res) => {
 
     const newProduct = new Product({
       title,
+      metaTitle,
+      metaDescription,
+      metaKeyword,
       image,
       KeyInsights,
       AdvertisingCost,
